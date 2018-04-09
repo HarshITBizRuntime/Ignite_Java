@@ -13,7 +13,7 @@ public class HelloWorld
 	      IgniteCache<Integer, String> cache = ignite.getOrCreateCache("myCache"); // Put values in cache.
 	      cache.put(1, "Hello");
 	      cache.put(2, "World!");	      // Get values from cache // Broadcast 'Hello World' on all the nodes in the cluster.
-	      cache.put(1, "How Are You ?");
+	      cache.put(1, "How Are You ?");n
 	      ignite.compute().broadcast(()->System.out.println(cache.get(1) + " " + cache.get(2)));
 	    }
 	  }
